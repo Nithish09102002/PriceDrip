@@ -20,7 +20,23 @@
       </select>
     </header>
 
-    <main id="product-list"></main>
+    <div class="filters">
+      <label for="platform">Platform:</label>
+      <select id="platform">
+        <option value="all">All</option>
+        <option value="Flipkart">Flipkart</option>
+        <option value="Amazon">Amazon</option>
+        <option value="Ajio">Ajio</option>
+        <option value="Meesho">Meesho</option>
+      </select>
+
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="default">Default</option>
+        <option value="lowToHigh">Price: Low to High</option>
+        <option value="highToLow">Price: High to Low</option>
+      </select>
+    </div>
 
     <script src="script.js"></script>
   </body>
