@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Noise Smart Watch",
+    "image": "https://example.com/noise.jpg",
+    "price": 1499,
+    "lowest": true,
+    "rating": 4.2,
+    "platform": "Amazon",
+    "link": "https://www.amazon.in/dp/B000EXAMPLE"
+  },
+  {
+    "name": "Campus Shoes - White",
+    "image": "https://example.com/campus.jpg",
+    "price": 999,
+    "lowest": false,
+    "rating": 4.0,
+    "platform": "Flipkart",
+    "link": "https://www.flipkart.com/p/B000EXAMPLE"
+  }
+]
