@@ -1,7 +1,7 @@
 [
   {
     "name": "Noise Smart Watch",
-    "image": "https://example.com/noise.jpg",
+    "image": "https://m.media-amazon.com/images/I/61ZDYfHq+PL._AC_UL480_FMwebp_QL65_.jpg",
     "price": 1499,
     "lowest": true,
     "rating": 4.2,
@@ -10,7 +10,7 @@
   },
   {
     "name": "Campus Shoes - White",
-    "image": "https://example.com/campus.jpg",
+    "image": "https://m.media-amazon.com/images/I/81ZFWuznaVL._AC_UL480_FMwebp_QL65_.jpg",
     "price": 999,
     "lowest": false,
     "rating": 4.0,
