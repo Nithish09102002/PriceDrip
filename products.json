@@ -1,7 +1,7 @@
 [
   {
     "name": "Flipkart - Shoes",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://redtape.com/cdn/shop/files/RSO4034_1_40cd841c-11dc-4c78-ab85-bfad034e31fe.jpg?v=1751015717",
     "price": 822,
     "lowest": true,
     "rating": 4.1,
@@ -10,7 +10,7 @@
   },
   {
     "name": "Flipkart - Bag",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://images.jdmagicbox.com/quickquotes/images_main/sara-30-liters-polyester-black-school-bag-black-178207114-ksaft.jpg",
     "price": 458,
     "lowest": true,
     "rating": 4.8,
@@ -178,6 +178,15 @@
     "rating": 3.6,
     "platform": "Amazon",
     "link": "https://amazon.com/product/coffee-mug"
+  },
+  {
+    "name": "Test Watch",
+    "image": "https://m.media-amazon.com/images/I/61ZDYfHq+PL._AC_UL480_FMwebp_QL65_.jpg",
+    "price": 1499,
+    "lowest": true,
+    "rating": 4.2,
+    "platform": "Amazon",
+    "link": "https://www.amazon.in/dp/B000EXAMPLE"
   },
   {
     "name": "Ajio - Shirt",

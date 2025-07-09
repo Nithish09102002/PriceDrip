@@ -1,66 +1,291 @@
+/* Global styles */
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  color: #333;
+  background: #f4f2ee; /* Premium soft background */
+  color: #2c2c2c;
 }
 
+/* Sticky header */
 header {
   padding: 20px;
-  background: #fff;
   text-align: center;
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  background: #fffdf9; /* Subtle luxurious cream */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-#search,
-#filter-platform {
-  margin: 10px;
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Filters and search row */
+.top-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding: 15px 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-block {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-block label {
+  font-size: 18px;
+}
+
+/* Filter controls */
+.top-filters select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.top-filters input[type="text"] {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
   padding: 10px;
-  width: 80%;
-  max-width: 300px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-main {
+/* Product grid */
+#product-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
-.card {
-  background: white;
+/* Product card */
+.product-card {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  height: 360px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card img {
-  max-width: 100%;
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* 👈 makes image fill the box */
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.card h3 {
-  font-size: 18px;
-  margin: 10px 0 5px;
+.product-card h3 {
+  font-size: 16px;
+  margin: 5px 0;
 }
 
-.card p {
-  margin: 0;
+.product-card p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #f39c12;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
   font-size: 14px;
 }
 
-.filters {
-  display: flex;
-  gap: 20px;
-  padding: 15px;
-  background-color: #f7f7f7;
-  margin-bottom: 20px;
-  justify-content: center;
+.product-card a:hover {
+  background: #d27c0d;
 }
 
-.filters label {
-  font-weight: bold;
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+.filter-dropdown .icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 180px; /* 🔼 Increased width */
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-options button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px; /* 🔼 Increased padding */
+  border: none;
+  background: white;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-options button:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-options {
+  transition: all 0.2s ease;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+  color: white;
+}
+
+.badge.amazon {
+  background-color: #3498db;
+}
+
+.badge.flipkart {
+  background-color: #8e44ad;
+}
+
+.badge.meesho {
+  background-color: #e91e63;
+}
+
+.badge.ajio {
+  background-color: #2c3e50;
+}
+
+/* Add this below .filter-block or near .top-filters section */
+
+.sort-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.sort-toggle:hover {
+  background-color: #f3f3f3;
+}
+
+.sort-toggle .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Optional: visually indicate current sort direction */
+.sort-toggle.asc .icon {
+  transform: rotate(0deg);
+}
+
+.sort-toggle.desc .icon {
+  transform: rotate(180deg);
+}
+
+.sort-toggle span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Fix grid layout when only 1 or 2 product cards */
+#product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  justify-content: center; /* ensures cards are centered */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .product-card img {
+    width: 45%;
+    height: auto;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .product-card h3,
+  .product-card p,
+  .product-card a {
+    margin: 5px 0;
+  }
+
+  .product-card a {
+    margin-top: 10px;
+    padding: 6px 10px;
+  }
+
+  .product-card-content {
+    width: 55%;
+  }
 }
