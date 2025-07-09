@@ -66,12 +66,12 @@ sortToggle.addEventListener("click", () => {
     currentSort = "highToLow";
     sortToggle.classList.remove("asc");
     sortToggle.classList.add("desc");
-    label.textContent = "Price: High to Low";
+    // label.textContent = "Price: High to Low";
   } else {
     currentSort = "lowToHigh";
     sortToggle.classList.remove("desc");
     sortToggle.classList.add("asc");
-    label.textContent = "Price: Low to High";
+    // label.textContent = "Price: Low to High";
   }
 
   applyFilters();

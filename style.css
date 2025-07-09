@@ -132,10 +132,19 @@ header p {
   width: 20px;
   height: 20px;
   object-fit: contain;
+  padding: 8px 12px;
 }
 
 .filter-dropdown {
   position: relative;
+  height: 36px;
+  /* padding: 8px 12px; */
+}
+
+.filter-dropdown :hover {
+  background-image: initial;
+  border-radius: 6px;
+  background-color: var(--darkreader-background-ffffff, #232525);
 }
 
 .filter-dropdown .icon {
@@ -214,8 +223,8 @@ header p {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
+  /* padding: 8px 12px; */
+  /* border: 1px solid #ccc; */
   border-radius: 6px;
   background: #fff;
   font-size: 14px;
